@@ -133,7 +133,7 @@ namespace ConsoleApp3
             }
         }
 
-        private void BuyTicket()
+        private void BuyTicket(/*Тут нужно передать массив из базы данных */)
         {
             Console.Clear();
             Console.Write(@"################################################################################
@@ -148,6 +148,22 @@ namespace ConsoleApp3
             Console.SetCursorPosition(52, 3);
             string Kuda = Console.ReadLine();
             Console.SetCursorPosition(0, 7);
+
+            // Тут должен быть код который выводит рейсы подходящие под запросы клиента                 
+
+            ////////////////////////////////////////////////////////////////////////////
+
+
+            // Нужно прописать выбор определённого рейса
+            /*int[] res = { };
+            for (int i = 0; i < res.Length; i++)
+            {
+                if (Otkuda == *** && Kuda == ***)
+                {
+                    
+                }
+            } */
+
 
             RunMainMenu();
         }
