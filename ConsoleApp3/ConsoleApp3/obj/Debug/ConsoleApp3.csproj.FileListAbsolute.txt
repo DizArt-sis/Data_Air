@@ -6,3 +6,11 @@ G:\Progect C#\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.SuggestedBind
 G:\Progect C#\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreCompileInputs.cache
 G:\Progect C#\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.exe
 G:\Progect C#\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
+C:\Users\Артём\Source\Repos\Data_Air\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+C:\Users\Артём\Source\Repos\Data_Air\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+C:\Users\Артём\Source\Repos\Data_Air\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+C:\Users\Артём\Source\Repos\Data_Air\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.AssemblyReference.cache
+C:\Users\Артём\Source\Repos\Data_Air\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Артём\Source\Repos\Data_Air\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreCompileInputs.cache
+C:\Users\Артём\Source\Repos\Data_Air\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+C:\Users\Артём\Source\Repos\Data_Air\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.pdb

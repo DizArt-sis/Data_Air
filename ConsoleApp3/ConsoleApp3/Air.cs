@@ -88,6 +88,9 @@ namespace ConsoleApp3
                     MyTicket();
                     break;
                 case 2:
+                    ChangePassword();
+                    break;
+                case 3:
                     Exit();
                     break;
             }
@@ -194,6 +197,32 @@ namespace ConsoleApp3
             RunAdminMenu();
         }
 
+        private void ChangePassword()
+        {
+            Console.Clear();
+            Console.Write(@"################################################################################
+#       _   _                                                           _      #
+#      | \ | |                                                         | |     #
+#      |  \| | _____      __  _ __   __ _ ___ _____      _____  _ __ __| |     #
+#      | . ` |/ _ \ \ /\ / / | '_ \ / _` / __/ __\ \ /\ / / _ \| '__/ _` |     #
+#      | |\  |  __/\ V  V /  | |_) | (_| \__ \__ \\ V  V / (_) | | | (_| |     #
+#      \_| \_/\___| \_/\_/   | .__/ \__,_|___/___/ \_/\_/ \___/|_|  \__,_|     #
+#                            | |                                               #
+#                            |_|                                               #
+#                                                                              #
+#                 New password                      Repeat the password        #
+#               __________________                  __________________         #
+#              |                  |                |                  |        #
+#               ''''''''''''''''''                  ''''''''''''''''''         #
+#                                                                              #
+################################################################################");
+            Console.SetCursorPosition(30, 15);
+            string new_password = Console.ReadLine();
+            Console.SetCursorPosition (55, 15);
+            string rep_password = Console.ReadLine();
+            RunMainMenu();
+        }
+
         private void View_Bookings()
         {
             Console.Clear();
@@ -291,19 +320,36 @@ namespace ConsoleApp3
 #           |_|  \_\___|\__, |_|___/\__|_|  \__,_|\__|_|\___/|_| |_|           #
 #                        __/ |                                                 #
 #                       |___/                                                  #
+#                                                                              #
+#         Passport details:                                                    #
+#                 ________________                     _______________         #
+#         Name : |                |         Surname : |               |        #
+#                 ''''''''''''''''                     '''''''''''''''         #
+#                 ________________                     _______________         #
+#       Series : |                |          Number : |               |        #
+#                 ''''''''''''''''                     '''''''''''''''         #
 #                 ________________                     _______________         #
 #        Login : |                |       Password :  |               |        #
 #                 ''''''''''''''''                     '''''''''''''''         #
-#                                                                              #
-#                                                                              #
-#                                                                              #
 ################################################################################");
             FileManager fileManager = new FileManager("users.txt");
             User newUser = new User("Artem", "12345", "johndoe@example.com");
-            Console.SetCursorPosition(18, 10);
+            Console.SetCursorPosition(18, 12);
             string name = Console.ReadLine();
-            newUser.Username = name;
-            Console.SetCursorPosition(55, 10);
+            Console.SetCursorPosition(55, 12);
+            string surname = Console.ReadLine();
+            Console.SetCursorPosition(18, 15);
+            string series = Console.ReadLine();
+            Console.SetCursorPosition(55, 15);
+            string number = Console.ReadLine();
+
+
+
+
+            Console.SetCursorPosition(18, 18);
+            string login = Console.ReadLine();
+            newUser.Username = login;
+            Console.SetCursorPosition(55, 18);
             string pass = Console.ReadLine();
             newUser.Password = pass;
             fileManager.SaveUser(newUser);
