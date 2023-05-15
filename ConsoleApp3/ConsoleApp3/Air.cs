@@ -281,6 +281,8 @@ namespace ConsoleApp3
             string surname = Console.ReadLine();
             RunAdminMenu();
 
+
+
         }
         private void Authorization()
         {
@@ -311,14 +313,27 @@ namespace ConsoleApp3
             if (fileManager.UserExists(username, password))
             {
                 Console.SetCursorPosition(35, 12);
-                Console.WriteLine("Login successful!");
+                Console.WriteLine(@"Login successful!");
                 Console.ReadKey();
                 RunMainMenu();
             }
             else
             {
-                Console.SetCursorPosition(35, 12);
-                Console.WriteLine("Invalid username or password.");
+                Console.Clear() ;
+                Console.WriteLine(@"################################################################################
+#                                                                              #
+# _____                _ _     _                                             _ #
+#|_   _|              | (_)   | |                                           | |#
+#  | | _ ____   ____ _| |_  __| |  _ __   __ _ ___ _____      _____  _ __ __| |#
+#  | || '_ \ \ / / _` | | |/ _` | | '_ \ / _` / __/ __\ \ /\ / / _ \| '__/ _` |#
+# _| || | | \ V / (_| | | | (_| | | |_) | (_| \__ \__ \\ V  V / (_) | | | (_| |#
+# \___/_| |_|\_/ \__,_|_|_|\__,_| | .__/ \__,_|___/___/ \_/\_/ \___/|_|  \__,_|#
+#                                 | |                                          #
+#                                 |_|                                          #
+#                                                                              #
+#                       press any button to exit...                            #
+#                                                                              #
+################################################################################");
                 Console.ReadKey();
                 RunAutoMenu();
             }
