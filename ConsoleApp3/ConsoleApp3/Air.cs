@@ -73,7 +73,9 @@ namespace ConsoleApp3
  |      Buy a ticket       |
  ---------------------------", @"---------------------------
  |        My tickets       |
- ---------------------------", @"---------------------------
+ ---------------------------",@"---------------------------
+ |      Change Password    |
+ ---------------------------" ,@"---------------------------
  |          Exit           |
  ---------------------------" };
             Menu allMenu = new Menu(prompt, options);
@@ -232,9 +234,9 @@ namespace ConsoleApp3
 #               ''''''''''''''''''                  ''''''''''''''''''         #
 #                                                                              #
 ################################################################################");
-            Console.SetCursorPosition(30, 15);
+            Console.SetCursorPosition(16, 12);
             string new_password = Console.ReadLine();
-            Console.SetCursorPosition (55, 15);
+            Console.SetCursorPosition (52, 12);
             string rep_password = Console.ReadLine();
             RunMainMenu();
         }
