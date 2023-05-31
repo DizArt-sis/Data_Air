@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -135,7 +136,56 @@ namespace ConsoleApp3
             }
         }
 
-        private void BuyTicket(/*Тут нужно передать массив из базы данных */)
+        private void Chan_Place()
+        {
+            int[] place = new int[51];
+            for (int i = 1; i < 51; i++)
+            {
+                place[i] = i + 1;
+            }
+            while (true)
+            {
+                Console.Clear();
+                
+                for (int j = 1; j < 51; j++)
+                {
+                    Console.Write(place[j]-1 + "  ");
+                    if (j % 5 == 0)
+                    {
+                        Console.WriteLine();
+                    }
+
+                }
+                Console.WriteLine("To change place 1-10 business class 11-50 Economy class 0 - exit");
+                int change = int.Parse(Console.ReadLine());
+                for (int i = 1; i < 51; i++)
+                {
+                    if (place[i]-1 == change && place[i] != 998)
+                    {
+                        place[i] = 999;
+                        Console.WriteLine("Вы успешно заняли место!");
+                        Console.ReadKey();
+                       
+                    }
+                    else if (place[i]-1 == change && place[i] == 998)
+                    {
+                        Console.WriteLine("Данное место занято!");
+                        Console.ReadKey();
+                        Console.ReadKey();
+
+                    }
+                    else if (change == 0)
+                    {
+                        RunMainMenu();
+                    }
+                    
+
+                }
+            }
+
+        }
+
+        private void BuyTicket()
         {
             Console.Clear();
             Console.Write(@"################################################################################
@@ -205,19 +255,19 @@ namespace ConsoleApp3
                     RunMainMenu();
                     break;
                     case 1:
-                    RunMainMenu();
+                    Chan_Place();
                     break;
                     case 2:
-                    RunMainMenu();
+                    Chan_Place();
                     break;
                     case 3:
-                    RunMainMenu();
+                    Chan_Place();
                     break;
                     case 4:
-                    RunMainMenu();
+                    Chan_Place();
                     break;
                     case 5:
-                    RunMainMenu();
+                    Chan_Place();
                     break;
                 default:
                     RunMainMenu();
