@@ -150,24 +150,82 @@ namespace ConsoleApp3
             Console.SetCursorPosition(52, 3);
             string Kuda = Console.ReadLine();
             Console.SetCursorPosition(0, 7);
+            int num = 5; // Кол-во рейсов из базы данных
+            string[] num_res = new string[num]; // Массив номеров рейсов
+            num_res[0] = "222233334444";
+            num_res[1] = "123456789";
+            num_res[2] = "32323232323";
+            num_res[3] = "6666666555555";
+            num_res[4] = "33131313133131";
+            string[] data = new string[num]; // Даты массив
+            data[0] = "10.22.33";
+            data[1] = "32.32.32";
+            data[2] = "11.11.11";
+            data[3] = "3.4.5";
+            data[4] = "2.2.2";
+            string[] data_ot = new string[num]; // Даты отправлений массив
+            data_ot[0] = "10.22.33";
+            data_ot[1] = "32.32.32";
+            data_ot[2] = "11.11.11";
+            data_ot[3] = "3.4.5";
+            data_ot[4] = "2.2.2";
+            string[] data_pr = new string[num]; // Даты прибытия отправлений массив
+            data_pr[0] = "11.11.11";
+            data_pr[1] = "22.22.33";
+            data_pr[2] = "44.2.2";
+            data_pr[3] = "44.44.44";
+            data_pr[4] = "2.22.2";
+            string[] place_ot = new string[num]; // Место отправления массив
+            place_ot[0] = "Vlad";
+            place_ot[1] = "Vlad";
+            place_ot[2] = "Vlad";
+            place_ot[3] = "Vlad";
+            place_ot[4] = "Vlad";
+            string[] place_pr = new string[num]; // Место прибытия массив
+            place_pr[0] = "Artem";
+            place_pr[1] = "Artem";
+            place_pr[2] = "Artem";
+            place_pr[3] = "Artem";
+            place_pr[4] = "Artem";
 
-            // Тут должен быть код который выводит рейсы подходящие под запросы клиента                 
-
-            ////////////////////////////////////////////////////////////////////////////
-
-
-            // Нужно прописать выбор определённого рейса
-            /*int[] res = { };
-            for (int i = 0; i < res.Length; i++)
+            for (int i = 0; i < num; i++)
             {
-                if (Otkuda == *** && Kuda == ***)
-                {
-                    
-                }
-            } */
+                Console.WriteLine($"{i+1}.");
+                Console.WriteLine($"\t 1.Flight number: {num_res[i]}");
+                Console.WriteLine($"\t 2.Departure date: {data_ot[i]}");
+                Console.WriteLine($"\t 3.Arrival date: {data_pr[i]}");
+                Console.WriteLine($"\t 4.Place of departure: {place_ot[i]}");
+                Console.WriteLine($"\t 5.Place of arrival: {place_pr[i]}");
+            }
+            Console.WriteLine("Select a flight or enter 0 to exit");
+            int number = int.Parse( Console.ReadLine() );
+            switch (number)
+            {
+                case 0:
+                    RunMainMenu();
+                    break;
+                    case 1:
+                    RunMainMenu();
+                    break;
+                    case 2:
+                    RunMainMenu();
+                    break;
+                    case 3:
+                    RunMainMenu();
+                    break;
+                    case 4:
+                    RunMainMenu();
+                    break;
+                    case 5:
+                    RunMainMenu();
+                    break;
+                default:
+                    RunMainMenu();
+                    break;
+            }
 
 
-            RunMainMenu();
+            
         }
 
         private void MyTicket()
@@ -184,6 +242,84 @@ namespace ConsoleApp3
 ################################################################################");
             Console.SetCursorPosition(0, 8);
             Console.WriteLine();
+            int num = 5; // Кол-во рейсов из базы данных
+            string[] num_res = new string[num]; // Массив номеров рейсов
+            num_res[0] = "222233334444";
+            num_res[1] = "123456789";
+            num_res[2] = "32323232323";
+            num_res[3] = "6666666555555";
+            num_res[4] = "33131313133131";
+            string[] data = new string[num]; // Даты массив
+            data[0] = "10.22.33";
+            data[1] = "32.32.32";
+            data[2] = "11.11.11";
+            data[3] = "3.4.5";
+            data[4] = "2.2.2";
+            string[] data_ot = new string[num]; // Даты отправлений массив
+            data_ot[0] = "10.22.33";
+            data_ot[1] = "32.32.32";
+            data_ot[2] = "11.11.11";
+            data_ot[3] = "3.4.5";
+            data_ot[4] = "2.2.2";
+            string[] data_pr = new string[num]; // Даты прибытия отправлений массив
+            data_pr[0] = "11.11.11";
+            data_pr[1] = "22.22.33";
+            data_pr[2] = "44.2.2";
+            data_pr[3] = "44.44.44";
+            data_pr[4] = "2.22.2";
+            string[] place_ot = new string[num]; // Место отправления массив
+            place_ot[0] = "Vlad";
+            place_ot[1] = "Vlad";
+            place_ot[2] = "Vlad";
+            place_ot[3] = "Vlad";
+            place_ot[4] = "Vlad";
+            string[] place_pr = new string[num]; // Место прибытия массив
+            place_pr[0] = "Artem";
+            place_pr[1] = "Artem";
+            place_pr[2] = "Artem";
+            place_pr[3] = "Artem";
+            place_pr[4] = "Artem";
+
+            for (int i = 0; i < num; i++)
+            {
+                Console.WriteLine($"{i + 1}.");
+                Console.WriteLine($"\t 1.Flight number: {num_res[i]}");
+                Console.WriteLine($"\t 2.Departure date: {data_ot[i]}");
+                Console.WriteLine($"\t 3.Arrival date: {data_pr[i]}");
+                Console.WriteLine($"\t 4.Place of departure: {place_ot[i]}");
+                Console.WriteLine($"\t 5.Place of arrival: {place_pr[i]}");
+            }
+            Console.WriteLine("Enter 0 to exit the menu, or the flight number to delete it");
+            int vib = int.Parse(Console.ReadLine());
+            if (vib == 0)
+            {
+                RunMainMenu();
+            }
+            else
+            {
+                switch (vib)
+                {
+
+                    case 1:
+                        RunMainMenu();
+                        break;
+                    case 2:
+                        RunMainMenu();
+                        break;
+                    case 3:
+                        RunMainMenu();
+                        break;
+                    case 4:
+                        RunMainMenu();
+                        break;
+                    case 5:
+                        RunMainMenu();
+                        break;
+                    default:
+                        MyTicket();
+                        break;
+                }
+            }
             Console.ReadKey();
             RunMainMenu();
 
@@ -322,20 +458,26 @@ namespace ConsoleApp3
             else
             {
                 Console.Clear() ;
-                Console.WriteLine(@"################################################################################
-#                                                                              #
-# _____                _ _     _                                             _ #
-#|_   _|              | (_)   | |                                           | |#
-#  | | _ ____   ____ _| |_  __| |  _ __   __ _ ___ _____      _____  _ __ __| |#
-#  | || '_ \ \ / / _` | | |/ _` | | '_ \ / _` / __/ __\ \ /\ / / _ \| '__/ _` |#
-# _| || | | \ V / (_| | | | (_| | | |_) | (_| \__ \__ \\ V  V / (_) | | | (_| |#
-# \___/_| |_|\_/ \__,_|_|_|\__,_| | .__/ \__,_|___/___/ \_/\_/ \___/|_|  \__,_|#
-#                                 | |                                          #
-#                                 |_|                                          #
-#                                                                              #
-#                       press any button to exit...                            #
-#                                                                              #
-################################################################################");
+                Console.WriteLine(@"####################################################################################################
+#                                                                                                  #
+#  _____                _ _ _     _                _                                         _     #
+# |_   _|              | | (_)   | |              (_)                                       | |    #
+#   | | _ ____   ____ _| | |_  __| |   ___  _ __   _ _ __   ___ _ __ ___  _ __ _ __ ___  ___| |_   #
+#   | || '_ \ \ / / _` | | | |/ _` |  / _ \| '__| | | '_ \ / __| '__/ _ \| '__| '__/ _ \/ __| __|  #
+#  _| || | | \ V | (_| | | | | (_| | | (_) | |    | | | | | (__| | | (_) | |  | | |  __| (__| |_   #
+#  \___|_| |_|\_/ \__,_|_|_|_|\__,_|  \___/|_|    |_|_| |_|\___|_|  \___/|_|  |_|  \___|\___|\__|  #
+#                                                                   _       _                      #
+#                                                                  | |     | |                     #
+#                                                                __| | __ _| |_ __ _               #
+#                                                               / _` |/ _` | __/ _` |              #
+#                                                              | (_| | (_| | || (_| |              #
+#                                                               \__,_|\__,_|\__\__,_|              #
+#           Press any button to exit...                                                            #
+#                                                                                                  #
+#                                                                                                  #
+#                                                                                                  #
+#                                                                                                  #
+####################################################################################################");
                 Console.ReadKey();
                 RunAutoMenu();
             }
